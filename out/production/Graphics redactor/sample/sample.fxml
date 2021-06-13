@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox minHeight="200.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Canvas fx:id="isCanvas" height="400.0" onMouseClicked="#clickCanvas" width="600.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Button minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#clickButton" text="Отрисовать" />
+            <ChoiceBox fx:id="chBox" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <ListView fx:id="listOfPoints" prefHeight="100.0" prefWidth="170.0">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin></ListView>
+            <Button mnemonicParsing="false" onAction="#toLoad" text="Загрузить" />
+            <Button mnemonicParsing="false" onAction="#onSave" text="Сохранить" />
+            <ChoiceBox fx:id="choicePoint" prefWidth="150.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
