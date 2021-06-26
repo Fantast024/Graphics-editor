@@ -18,4 +18,9 @@ public class Point {
         this.y = y;
         this.type = str;
     }
+    
+    public String getString(){
+        String str = type + " " + "Координаты: " + x + " " + y + " " + "Цвет " + color;
+        return str;
+    }
 }
