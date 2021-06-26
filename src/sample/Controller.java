@@ -45,6 +45,18 @@ public class Controller {
         choicePoint.getItems().addAll(typePoint);
         choicePoint.setValue("Карандаш");
         model = new Model();
+        listOfPoints.setCellFactory(param -> new ListCell<Point>(){
+            @Override
+            protected void updateItem(Point point, boolean empty) {
+                super.updateItem(point, empty);
+
+                if (empty || point == null || point.getString() == null) {
+                    setText(null);
+                } else {
+                    setText(point.getString());
+                }
+            }
+        });
     }
 
     public void clickButton(){
